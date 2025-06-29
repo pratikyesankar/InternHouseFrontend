@@ -70,7 +70,7 @@ function PostIntern() {
           .filter((q) => q.length > 0)
       };
 
-      const API_URL = 'http://localhost:9000/interns';
+      const API_URL = 'https://intern-house-frontend-rouge.vercel.app/interns';
       await axios.post(API_URL, newIntern);
 
       setMessage("✅ Job posted successfully!");

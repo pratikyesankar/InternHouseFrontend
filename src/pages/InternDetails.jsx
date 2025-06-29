@@ -8,7 +8,7 @@ function InternDetails() {
   const [intern, setIntern] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:9000/interns/${id}`).then((res) => {
+    axios.get(`https://intern-house-frontend-rouge.vercel.app/interns/${id}`).then((res) => {
       setIntern(res.data);
     });
   }, [id]);

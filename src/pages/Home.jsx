@@ -8,7 +8,7 @@ function Home() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:9000/interns')
+    axios.get('https://intern-house-frontend-rouge.vercel.app/interns')
       .then((res) => setInterns(res.data))
       .catch((err) => console.error("Failed to fetch setInterns:", err));
   }, []);
