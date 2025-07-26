@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function InternCard({ intern }) {
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://intern-house-frontend-rouge.vercel.app/${intern._id}`);
+      await axios.delete(`https://intern-house-backend-sandy.vercel.app/${intern._id}`);
       alert('Intern deleted successfully!');
       window.location.reload();  
     } catch (error) {

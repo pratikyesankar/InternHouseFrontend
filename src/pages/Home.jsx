@@ -8,7 +8,7 @@ function Home() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('https://intern-house-frontend-rouge.vercel.app/interns')
+    axios.get('https://intern-house-backend-sandy.vercel.app/interns')
       .then((res) => setInterns(res.data))
       .catch((err) => console.error("Failed to fetch setInterns:", err));
   }, []);
@@ -16,6 +16,8 @@ function Home() {
   const filteredInterns = interns.filter((intern) =>
     intern.title.toLowerCase().includes(search.toLowerCase())
   );
+  
+  console.log("where is data", filteredInterns)
 
   return (
     <div className="container py-4">
